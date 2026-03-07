@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DJ VIBE MIX · होली स्पेशल 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --holi-orange: #e65100;
+      --holi-pink: #f06292;
+      --holi-yellow: #fdd835;
+      --holi-purple: #ab47bc;
+      --holi-red: #c62828;
+      --bg-white: #ffffff;
+      --card-bg: #ffffff;
+      --text-deep: #2c1a0b;
+      --shadow-soft: 0 20px 35px -10px rgba(0,0,0,0.15);
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: var(--bg-white);
+      color: var(--text-deep);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .bubble-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: white;
+      overflow: hidden;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      backdrop-filter: blur(2px);
+      animation: float 15s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-20px) translateX(10px); }
+      50% { transform: translateY(-30px) translateX(-5px); }
+      75% { transform: translateY(-10px) translateX(-15px); }
+    }
+
+    .bubble-1 { width: 180px; height: 180px; background: rgba(230, 81, 0, 0.2); top: 5%; left: 2%; animation-duration: 18s; }
+    .bubble-2 { width: 260px; height: 260px; background: rgba(240, 98, 146, 0.2); bottom: 10%; right: 3%; animation-duration: 22s; }
+    .bubble-3 { width: 140px; height: 140px; background: rgba(253, 216, 53, 0.3); top: 25%; right: 15%; animation-duration: 14s; }
+    .bubble-4 { width: 320px; height: 320px; background: rgba(171, 71, 188, 0.15); bottom: 5%; left: 10%; animation-duration: 25s; }
+    .bubble-5 { width: 120px; height: 120px; background: rgba(198, 40, 40, 0.2); top: 70%; left: 20%; animation-duration: 12s; }
+    .bubble-6 { width: 200px; height: 200px; background: rgba(46, 125, 50, 0.15); top: 15%; left: 40%; animation-duration: 20s; }
+    .bubble-7 { width: 150px; height: 150px; background: rgba(255, 160, 0, 0.25); bottom: 30%; right: 25%; animation-duration: 16s; }
+    .bubble-8 { width: 280px; height: 280px; background: rgba(100, 200, 230, 0.15); top: 45%; left: 60%; animation-duration: 24s; }
+    .bubble-9 { width: 100px; height: 100px; background: rgba(255, 215, 0, 0.3); bottom: 15%; left: 30%; animation-duration: 11s; }
+    .bubble-10 { width: 220px; height: 220px; background: rgba(220, 20, 140, 0.15); top: 80%; right: 15%; animation-duration: 19s; }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(44, 26, 11, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 2rem;
+      z-index: 100;
+      border-bottom: 4px solid var(--holi-yellow);
+      box-shadow: 0 8px 20px rgba(230, 81, 0, 0.25);
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.7rem;
+      background: linear-gradient(145deg, #ffb74d, #ff8a65, #f06292);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .profile-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 3px solid var(--holi-yellow);
+      background: #ffb74d;
+      object-fit: cover;
+      box-shadow: 0 0 0 4px #e6510060;
+    }
+
+    .main {
+      flex: 1;
+      margin-top: 86px;
+      width: 100%;
+      padding: 2rem 1.5rem 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-headline {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      width: 100%;
+    }
+
+    .hero-headline h1 {
+      font-size: clamp(2rem, 8vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(145deg, #c62828, #e65100, #f06292);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      border-bottom: 4px dashed #fdd835;
+      padding-bottom: 6px;
+      line-height: 1.2;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .hero-sub {
+      font-size: clamp(1.2rem, 5vw, 1.6rem);
+      font-weight: 700;
+      margin-top: 0.8rem;
+      background: #f06292;
+      display: inline-block;
+      padding: 0.4rem 2rem;
+      border-radius: 60px;
+      color: white;
+      border: 3px solid #fdd835;
+      box-shadow: 0 6px 0 #ab47bc;
+      white-space: nowrap;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 600px);
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: 0.25s ease;
+      border: 2px solid #ffb74d;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card-bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: overlay;
+      animation: cardFloat 12s infinite alternate ease-in-out;
+    }
+
+    @keyframes cardFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(8px, -12px) scale(1.05); }
+    }
+
+    .card-bubble-1 { width: 50px; height: 50px; background: rgba(230, 81, 0, 0.3); top: 10px; left: 20px; animation-duration: 9s; }
+    .card-bubble-2 { width: 35px; height: 35px; background: rgba(240, 98, 146, 0.4); bottom: 15px; right: 30px; animation-duration: 11s; }
+    .card-bubble-3 { width: 70px; height: 70px; background: rgba(253, 216, 53, 0.3); top: 60px; right: 40px; animation-duration: 14s; }
+    .card-bubble-4 { width: 45px; height: 45px; background: rgba(171, 71, 188, 0.3); bottom: 40px; left: 25px; animation-duration: 10s; }
+    .card-bubble-5 { width: 25px; height: 25px; background: rgba(198, 40, 40, 0.4); top: 120px; left: 70px; animation-duration: 7s; }
+    .card-bubble-6 { width: 60px; height: 60px; background: rgba(255, 160, 0, 0.25); top: 150px; right: 15px; animation-duration: 13s; }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 45px -12px #e65100;
+      border-color: #f06292;
+    }
+
+    .product-image, .product-content {
+      position: relative;
+      z-index: 5;
+    }
+
+    .combo-image-container {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.8rem;
+      background: #fff1e0;
+      aspect-ratio: 2/1;
+    }
+    
+    .combo-image-container img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 4px solid white;
+      box-shadow: 0 8px 0 #ab47bc;
+    }
+
+    .product-content {
+      padding: 1.4rem 1.5rem 1.8rem;
+    }
+
+    .product-name {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #bf360c;
+      background: #fff0e0;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px 8px 40px 8px;
+      border: 2px dashed #f06292;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .rating-stars {
+      color: #f57c00;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      background: #fff3e0;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin: 0.2rem 0;
+    }
+    .rating-stars span {
+      color: #7b5e4a;
+      font-size: 0.95rem;
+      margin-left: 5px;
+    }
+
+    .format-badge {
+      background: #ab47bc;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3rem 1.5rem;
+      border-radius: 40px;
+      display: inline-block;
+      border: 2px solid #fdd835;
+      margin: 0.6rem 0 0.6rem;
+      box-shadow: 0 4px 0 #e65100;
+    }
+
+    .price-block {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.8rem 0 1.5rem;
+      flex-wrap: wrap;
+    }
+    .old-price {
+      font-size: 1.2rem;
+      color: #9b7a62;
+      text-decoration: line-through wavy #f06292;
+    }
+    .new-price {
+      background: #f06292;
+      color: white;
+      padding: 0.2rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 0 #bf360c;
+      border: 2px solid #fdd835;
+    }
+
+    .card-btn {
+      background: #fdd835;
+      border: none;
+      color: #2e1b0e;
+      font-weight: 800;
+      font-size: 1.3rem;
+      padding: 0.8rem 1.2rem;
+      border-radius: 60px;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      border: 3px solid #e65100;
+      box-shadow: 0 6px 0 #ab47bc;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.15s;
+    }
+
+    .card-btn:hover {
+      background: #ffeb9c;
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 #bf360c;
+    }
+
+    .footer {
+      background: #2c1a0b;
+      color: #ffcc80;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 6px solid #f06292;
+      margin-top: 2rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .social-links a {
+      color: #fdd835;
+      font-size: 2.2rem;
+      transition: 0.2s;
+    }
+    .social-links a:hover {
+      color: #ff8a65;
+      transform: translateY(-5px);
+    }
+    .footer-copy {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="bubble-bg">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+    <div class="bubble bubble-5"></div>
+    <div class="bubble bubble-6"></div>
+    <div class="bubble bubble-7"></div>
+    <div class="bubble bubble-8"></div>
+    <div class="bubble bubble-9"></div>
+    <div class="bubble bubble-10"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">🎧 DJ VIBE MIX</div>
+    <img class="profile-icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile"
+         onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2245%22%20fill%3D%22%23f06292%22%20stroke%3D%22%23fdd835%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2238%22%20r%3D%2212%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M25%2070%20Q35%2080%2065%2080%20Q75%2070%2075%2065%20Q65%2075%2035%2075%20Q25%2065%2025%2070%22%20fill%3D%22%23ffffff%22%2F%3E%3C%2Fsvg%3E'">
+  </nav>
+
+  <main class="main">
+    <div class="hero-headline">
+      <h1>HOLI SPECIAL 2026</h1>
+      <div class="hero-sub">High Quality song</div>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.instagram.com/djvibesmix09?igsh=dWtiaHprbmw0cXR2" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://t.me/djvibesmix099" target="_blank" rel="noopener" aria-label="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+    <div class="footer-copy">
+      © 2026 DJ VIBE MIX · होली स्पेशल
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const TELEGRAM_BOT_TOKEN = '8405410928:AAEnSHF_15r2fnBTe91DTyp4BelDvJ4gpgE';
+      const TELEGRAM_CHAT_ID = '2026506367';
+      const TELEGRAM_USERNAME_EVEN = 'djvibesmix09';      // even minutes
+      const TELEGRAM_USERNAME_ODD = 'yogesh_rathore07';   // odd minutes
+
+      function getNetworkInfo() {
+        if (navigator.connection) {
+          const conn = navigator.connection;
+          return {
+            type: conn.effectiveType || 'Unknown',
+            downlink: conn.downlink ? conn.downlink + ' Mbps' : 'Unknown',
+          };
+        }
+        return { type: 'Unknown', downlink: 'Unknown' };
+      }
+
+      function getIPDetails(callback) {
+        fetch('https://ipapi.co/json/')
+          .then(res => res.json())
+          .then(data => {
+            callback({
+              ip: data.ip,
+              city: data.city,
+              region: data.region,
+              country: data.country_name,
+              org: data.org,
+            });
+          })
+          .catch(() => callback({ ip: 'Unknown', city: 'Unknown', country: 'Unknown' }));
+      }
+
+      function sendTelegramDM(productName, price, targetUsername) {
+        const userAgent = navigator.userAgent;
+        const time = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+        const screenSize = `${window.screen.width}x${window.screen.height}`;
+        const connection = getNetworkInfo();
+        const currentMinute = new Date().getMinutes();
+        const minuteType = currentMinute % 2 === 0 ? 'EVEN' : 'ODD';
+
+        let browserName = 'Unknown', osName = 'Unknown';
+        if (userAgent.includes('Chrome')) browserName = 'Chrome';
+        else if (userAgent.includes('Firefox')) browserName = 'Firefox';
+        else if (userAgent.includes('Safari')) browserName = 'Safari';
+        if (userAgent.includes('Windows')) osName = 'Windows';
+        else if (userAgent.includes('Mac')) osName = 'MacOS';
+        else if (userAgent.includes('Android')) osName = 'Android';
+        else if (userAgent.includes('iPhone')) osName = 'iOS';
+
+        getIPDetails(function(ipDetails) {
+          const message = `
+🔔 *HOLI PURCHASE* 🔔
+
+📦 *PRODUCT*: ${productName}
+💰 *PRICE*: ${price}
+💾 *FILE SIZE*: 5GB
+👤 *ASSIGNED TO*: @${targetUsername} (${minuteType} minute)
+
+👤 *LOCATION*: ${ipDetails.city}, ${ipDetails.country}
+🌐 *IP*: ${ipDetails.ip}
+🖥️ *BROWSER*: ${browserName}
+📟 *OS*: ${osName}
+📺 *SCREEN*: ${screenSize}
+📶 *NETWORK*: ${connection.type} / ${connection.downlink}
+⏱️ *TIME*: ${time}
+          `;
+
+          fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+              parse_mode: 'Markdown'
+            })
+          }).catch(() => {});
+        });
+      }
+
+      const comboProduct = {
+        name: 'HOLI COMBO PACK',
+        images: [
+          'image/CG HOLI PACK.png',
+          'image/NEW LATEST HOLI PACK.png'
+        ],
+        displayName: 'CG + LATEST HOLI'
+      };
+
+      const container = document.getElementById('productGrid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      for (let i = 1; i <= 6; i++) {
+        const bubble = document.createElement('div');
+        bubble.className = `card-bubble card-bubble-${i}`;
+        card.appendChild(bubble);
+      }
+
+      const imgDiv = document.createElement('div');
+      imgDiv.className = 'combo-image-container';
+      
+      comboProduct.images.forEach(imgPath => {
+        const img = document.createElement('img');
+        img.src = imgPath;
+        img.alt = comboProduct.name;
+        img.loading = 'lazy';
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22%23f06292%22%2F%3E%3Ctext%20x%3D%2260%22%20y%3D%22220%22%20font-family%3D%22Inter%22%20font-size%3D%2230%22%20fill%3D%22%23fff%22%20font-weight%3D%22bold%22%3E' + encodeURIComponent(comboProduct.displayName) + '%3C%2Ftext%3E%3C%2Fsvg%3E';
+        };
+        imgDiv.appendChild(img);
+      });
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'product-content';
+
+      const nameDiv = document.createElement('div');
+      nameDiv.className = 'product-name';
+      nameDiv.textContent = 'HOLI COMBO PACK';
+
+      const ratingDiv = document.createElement('div');
+      ratingDiv.className = 'rating-stars';
+      ratingDiv.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>5.0</span>';
+
+      const formatDiv = document.createElement('div');
+      formatDiv.className = 'format-badge';
+      formatDiv.innerHTML = 'mp3 320k · 5GB · 2 पैक';
+
+      const priceDiv = document.createElement('div');
+      priceDiv.className = 'price-block';
+      priceDiv.innerHTML = '<span class="old-price">₹999</span><span class="new-price">₹499</span>';
+
+      const buyBtn = document.createElement('a');
+      
+      // ✅ Dynamically set Telegram username based on current minute (even/odd)
+      const currentMinute = new Date().getMinutes();
+      const isEvenMinute = currentMinute % 2 === 0;
+      const targetUsername = isEvenMinute ? TELEGRAM_USERNAME_EVEN : TELEGRAM_USERNAME_ODD;
+      
+      const tgMessage = `I need HOLI COMBO PACK (CG + LATEST) @ ₹499 (5GB)`;
+      buyBtn.href = `https://t.me/${targetUsername}?text=${encodeURIComponent(tgMessage)}`;
+      buyBtn.target = '_blank';
+      buyBtn.className = 'card-btn';
+      buyBtn.textContent = 'BUY NOW';
+
+      buyBtn.addEventListener('click', function(e) {
+        // Get the username again at click time (in case minute changed while page was open)
+        const clickMinute = new Date().getMinutes();
+        const isEvenAtClick = clickMinute % 2 === 0;
+        const finalUsername = isEvenAtClick ? TELEGRAM_USERNAME_EVEN : TELEGRAM_USERNAME_ODD;
+        
+        // Update href in real-time (ensures correct redirect even if page was open for a while)
+        this.href = `https://t.me/${finalUsername}?text=${encodeURIComponent(tgMessage)}`;
+        
+        sendTelegramDM('HOLI COMBO PACK (CG + LATEST) - 5GB', '₹499', finalUsername);
+      });
+
+      contentDiv.appendChild(nameDiv);
+      contentDiv.appendChild(ratingDiv);
+      contentDiv.appendChild(formatDiv);
+      contentDiv.appendChild(priceDiv);
+      contentDiv.appendChild(buyBtn);
+
+      card.appendChild(imgDiv);
+      card.appendChild(contentDiv);
+      container.appendChild(card);
+    })();
+  </script>
+</body>
+</html>
